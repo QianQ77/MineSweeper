@@ -1,0 +1,69 @@
+<<<<<<< .mine
+Assign1: Due 11:59PM September 23
+
+Using Test First Development (no code without test first) implement the problem you designed in hw2. Feel free to evolve that design and use your judgment to make changes based on the improved understanding and learning.
+
+Take small steps, ask for frequent reviews.
+
+First start with a tests list and a canary test.
+
+After completing the programming (and only after that) answer the following questions:
+
+1. What did you learn mainly in this assignment?
+
+YOUR ANSWER GOES HERE
+Test-driven
+
+
+2. How is your current design different, if at all, from the strategic design created in hw2?
+
+YOUR ANSWER GOES HERE
+
+3. Were there any surprise or things you did not expect along the way? Any 
+particular problem faced, things you had to tackle that you did not expect 
+beforehand?
+
+YOUR ANSWER GOES HERE
+=======
+Assign1: Due 11:59PM September 23
+
+Using Test First Development (no code without test first) implement the problem you designed in hw2. Feel free to evolve that design and use your judgment to make changes based on the improved understanding and learning.
+
+Take small steps, ask for frequent reviews.
+
+First start with a tests list and a canary test.
+
+After completing the programming (and only after that) answer the following questions:
+
+1. What did you learn mainly in this assignment?
+	How powerful Test Driven Development (TDD) is for debugging errors that may have resulted from changes in the code. 
+We learn to take small steps instead of trying to deal with all of the logic in the product. By taking small test-driven steps, we can focus on one piece of code without involve too much complexity. We can then produce clear code which is easier to maintain and evolve once that piece of code is completed and tested. We can simply move on without worries because we know that very piece of code does what it needed to do.
+Using TDD allowed us to work on improving code without worrying about breaking our program since we can work on a new replacement piece of code independently from the main program. Then once we had confirmed that it performed its task properly we could then push the updated code onto the project replacing the older code out.   
+We learned to override a given function by creating mock objects allowing us to focus on the behavior of the new function we are testing. 
+We also learned that peer review/ getting feedback from another person is quite helpful as it allows us together to build from one another’s idea to build a better solution.
+
+
+2. How is your current design different, if at all, from the strategic design created in hw2?
+	When we first started conceptualizing the project’s tasks as a team we thought the game needed 7 distinct objects to run, but we then came to learn that the final product only needed four classes where one class was a test. 
+	When designing the layout of the Cell class we thought in order to differentiate if the Cell was empty, adjacent, or mined we had to create different object to indicate the different typed cells. It turned out that if you know where all the mines are, you can simply determine that all of the mined cell’s neighbors are adjacent Cells and the rest are empty. Therefore inheritance was not needed.
+	Cells where then classified by the state they were in by using the enum CellState {HIDDEN, EXPOSED, SEALED} where HIDDEN represented the state where the Cell was unexposed/ unsealed. 
+	The Controller for the program was substituted by the MineSweeper Class, which job was to store the states of the Cells, if the cell had a mine in them, recording if the cell was exposed/sealed/unsealed, keep track if the game was won/ lost, and count the number of mine around a cell to determine if it was empty or adjacent. 
+	In our final work, the MineSweeper class was the only class that manipulated the states of the cells while the MineSweeperFrame (View) dealt with the display, and simply called on those methods to manipulate the MineSweeper cell’s state based on the user’s command.
+
+3. Were there any surprise or things you did not expect along the way? Any particular problem faced, things you had to tackle that you did not expect beforehand?
+	At first we believed that exposing a given Cell and its neighbors was complicated when using a matrix, where at the time the game board we were designing needed extra zeros in it in order for us to retrieve all of its neighboring cells properly at all test cases. With the use of TDD we then realized that the tasks we thought we needed to perform were simply unneeded. And we came up with a new method to find neighbors using less code.   
+
+
+
+Total [100]: 96
+
+Program works and able to play the game [20pts]:
+All tests pass [20 pts]: 
+Test quality [20 pts]:
+Code quality [10 pts]: -2
+Extend MouseAdapter instead of implementing MouseListener to avoid writing those empty method.
+
+Test coverage [10 pts]: -2
+
+Design quality [10 pts]:
+Overall quality [10 pts]:>>>>>>> .r4016
